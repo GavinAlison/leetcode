@@ -26,8 +26,8 @@ public class TwoAdd {
             if (p1 != null) p1 = p1.next;
             if (p2 != null) p2 = p2.next;
         }
-        if (carry > 0)
-            curr.next = new ListNode(carry);
+        if (carry == 1)
+            curr.next = new ListNode(1);
         return dumyHead.next;
     }
 
