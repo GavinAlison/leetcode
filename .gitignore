@@ -6,6 +6,7 @@
 .idea
 *.iml
 .idea/
+.idea/workspace.xml
 out
 gen### Java template
 # Compiled class file
