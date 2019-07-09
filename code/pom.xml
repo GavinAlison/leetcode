@@ -11,6 +11,13 @@
 
     <groupId>com.alison</groupId>
     <artifactId>code</artifactId>
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <optional>true</optional>
+        </dependency>
+    </dependencies>
 
 
 </project>
