@@ -8,9 +8,6 @@ package com.alison;
  */
 public class TopN {
 
-    // 21,12,3,58,6,45,10,8,59,2
-    // 12 21 3
-    // 58 21 3 12
     // 构建堆
     private int[] buildHeap(int n, int[] data) {
         int[] result = new int[n];
@@ -34,7 +31,7 @@ public class TopN {
     // 21,12,3,58,6,45,10,8,59,2
     // 58 21 3 12
     // 调整data[i]
-    private void adjust(int i, int value, int[] result) {
+    private void adjust(int value, int[] result) {
         if (value <= result[0]) {
             return;
         }
@@ -71,13 +68,13 @@ public class TopN {
         int[] result = buildHeap(n, data);
         // n往后的数进行调整
         for (int i = n; i < data.length; i++) {
-            adjust(i, data[i], result);
+            adjust(data[i], result);
         }
     }
 
     // 打印数组
-    public void print(int[] data, int n) {
-        for (int i = 0; i < n; i++) {
+    public void print(int[] data) {
+        for (int i = 0; i < data.length; i++) {
             System.out.print(data[i] + " ");
         }
         System.out.println();

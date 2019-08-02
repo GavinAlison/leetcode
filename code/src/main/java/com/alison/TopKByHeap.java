@@ -14,6 +14,7 @@ import java.util.Scanner;
 /**
  * 求前面的最大K个 解决方案：小根堆
  * (数据量比较大（特别是大到内存不可以容纳）时，偏向于采用堆)
+ * 时间复杂度: O(nLogk) , n 为数组长度，k为取出的前K个数
  */
 public class TopKByHeap {
 
@@ -29,12 +30,16 @@ public class TopKByHeap {
         for (int i = 0; i < k; i++) {
             result[i] = a[i];
         }
+        // 调整heap为最小堆
         for (int i = 1; i < k; i++) {
             int child = i;
             int parent = (i - 1) / 2;
+            // temp 保证当前元素是最顶端
             int temp = a[i];
             while (parent >= 0 && child != 0 && result[parent] > temp) {
+                // 每次元素都下沉
                 result[child] = result[parent];
+                // 元素下标都上浮
                 child = parent;
                 parent = (parent - 1) / 2;
             }
@@ -45,6 +50,7 @@ public class TopKByHeap {
     }
 
     void insert(int a[], int value) {
+        // 替换堆顶元素
         a[0] = value;
         int parent = 0;
 
@@ -130,10 +136,11 @@ public class TopKByHeap {
     }
 
     public static void main(String[] args) {
-        int a[] = {4, 3, 5, 1, 2, 8, 9, 10};
-        int result[] = new TopKByHeap().getTopKByHeap(a, 3);
+        int a[] = {4, 3, 5, 1, 2, 8, 9, 10, 100, 87, 67, 55, 33};
+        int result[] = new TopKByHeap().getTopKByHeap(a, 5);
         for (int temp : result) {
-            System.out.println(temp);
+            System.out.print(temp + " ");
         }
+        System.out.println();
     }
 }
