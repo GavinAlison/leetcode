@@ -11,6 +11,9 @@
 out
 out/
 .idea_modules/
+
+**/target/**
+
 gen### Java template
 # Compiled class file
 *.class
