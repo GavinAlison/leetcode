@@ -5,7 +5,11 @@
 -   学习哈希表思想，并完成leetcode上的两数之和(1)及Happy Number(202)！
 (要求全部用哈希思想实现！)（选做）（注意：在第四天会进行继续学习）
 
-
+解答： 
+1. 实现动态扩容数组, 可支持增删改--> [DynamicArrat.java](https://github.com/GavinAlison/leetcode/tree/master/algorithm/src/main/java/com/alison/DynamicArray.java)
+2. 合并数组-->[ArrayDemo##mergeArray](https://github.com/GavinAlison/leetcode/tree/master/algorithm/src/main/java/com/alison/ArrayDemo.java)
+3. 两数之和-->[ArrayDemo##twoSum](https://github.com/GavinAlison/leetcode/tree/master/algorithm/src/main/java/com/alison/ArrayDemo.java)
+4. Happy Number-->[ArrayDemo##isHappy](https://github.com/GavinAlison/leetcode/tree/master/algorithm/src/main/java/com/alison/ArrayDemo.java)
 
 
 第一部分 就是熟悉动态数组的内容；

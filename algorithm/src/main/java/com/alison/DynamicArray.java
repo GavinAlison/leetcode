@@ -16,9 +16,7 @@ public class DynamicArray<E> {
 
     private transient Object[] elementData;
 
-    private int size;
-
-    private transient int modCount = 0;
+    private int size = 0;
 
     public DynamicArray(int initialCapacity) {
         if (initialCapacity > 0) {
@@ -37,7 +35,9 @@ public class DynamicArray<E> {
     // add
     public boolean add(E e) {
         ensureCapacityInternal(size + 1);
-        elementData[size + 1] = e;
+        elementData[size] = e;
+
+        size++;
         return true;
 
     }
@@ -63,7 +63,6 @@ public class DynamicArray<E> {
     }
 
     private void fastRemove(int index) {
-        modCount++;
         int numMoved = size - index - 1;
         if (numMoved > 0) {
             System.arraycopy(elementData, index + 1, elementData, index, numMoved);
@@ -73,7 +72,6 @@ public class DynamicArray<E> {
 
     public E remove(int index) {
         rangCheck(index);
-        modCount++;
         E oldValue = elementData(index);
 
         int numMoved = size - index - 1;
@@ -117,7 +115,6 @@ public class DynamicArray<E> {
     }
 
     private void ensureExplicitCapacity(int minCapacity) {
-        modCount++;
         if (minCapacity - elementData.length > 0)
             grow(minCapacity);
     }
@@ -138,6 +135,27 @@ public class DynamicArray<E> {
         if (minCapacity < 0)
             throw new OutOfMemoryError();
         return (minCapacity > MAX_ARRAY_SIZE) ? Integer.MAX_VALUE : MAX_ARRAY_SIZE;
+    }
+
+    @Override
+    public String toString() {
+        return "DynamicArray{" +
+                "elementData=" + Arrays.toString(elementData) +
+                ", size=" + size +
+                '}';
+    }
+
+    public static void main(String[] args) {
+        DynamicArray<Integer> dynamicArray = new DynamicArray<>();
+        dynamicArray.add(2);
+        dynamicArray.add(21);
+        dynamicArray.add(22);
+        dynamicArray.add(23);
+        System.out.println(dynamicArray);
+        int num = dynamicArray.get(0);
+        System.out.println(num);
+        dynamicArray.remove(2);
+        System.out.println(dynamicArray);
     }
 
 

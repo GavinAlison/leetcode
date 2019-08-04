@@ -31,7 +31,7 @@ public class ArrayDemo {
 
 
     //    leetcode上的两数之和
-    public int[] twoSum(int[] nums, int target) {
+    public static int[] twoSum(int[] nums, int target) {
         Map<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
             if (map.containsKey(target - nums[i]))
@@ -42,7 +42,7 @@ public class ArrayDemo {
     }
 
     // happy sum
-    public boolean isHappy(int n) {
+    public static boolean isHappy(int n) {
         Set<Integer> set = new HashSet<>();
         int m = 0;
         while (true) {
@@ -62,12 +62,55 @@ public class ArrayDemo {
         }
     }
 
+    public static List<List<Integer>> threeSum(int[] nums) {
+        List<List<Integer>> ans = new ArrayList();
+        Arrays.sort(nums);
+        int len = nums.length;
+        if (nums == null || len < 3) return ans;
+        for (int i = 0; i < len; i++) {
+            if (nums[i] > 0) break;
+            if (i > 0 && nums[i] == nums[i - 1]) continue;
+            int L = i + 1;
+            int R = len - 1;
+            while (L < R) {
+                int sum = nums[i] + nums[L] + nums[R];
+                if (sum == 0) {
+                    ans.add(Arrays.asList(nums[i], nums[L], nums[R]));
+                    while (L < R && nums[L] == nums[L + 1]) L++;
+                    while (L < R && nums[R] == nums[R - 1]) R--;
+                    L++;
+                    R--;
+                } else if (sum < 0) L++;
+                else if (sum > 0) R--;
+            }
+        }
+        return ans;
+    }
+
+    public static int majorityElement(int[] nums) {
+        int count = 0;
+        Integer candidate = null;
+        for (int num : nums) {
+            if (count == 0)
+                candidate = num;
+            count += (num == candidate) ? 1 : -1;
+        }
+        return candidate;
+    }
 
     public static void main(String[] args) {
         int[] a1 = {1, 3, 4, 8, 10};
         int[] a2 = {2, 3, 6, 9, 10};
+        System.out.println(Arrays.toString(a1));
         int[] result = mergeArray(a1, a2);
         System.out.println(Arrays.toString(result));
+        result = twoSum(a1, 7);
+        System.out.println(Arrays.toString(result));
+        System.out.println(isHappy(19));
+        List<List<Integer>> ans = threeSum(a1);
+        for (List<Integer> foo : ans) {
+            System.out.println(foo);
+        }
     }
 
 }
