@@ -4,9 +4,9 @@
 -   实现一个循环队列
 
 ## 解答
-顺序队列-->[ArrayQueue]()
-链式队列-->[ArrayQueue]()
-
+顺序队列-->[ArrayQueue](https://github.com/GavinAlison/leetcode/tree/master/algorithm/src/main/java/com/alison/ArrayQueue.java)
+链式队列-->[LinkedQueue](https://github.com/GavinAlison/leetcode/tree/master/algorithm/src/main/java/com/alison/LinkedQueue.java)
+循环队列-->[CircleQueue](https://github.com/GavinAlison/leetcode/tree/master/algorithm/src/main/java/com/alison/LinkedQueue.java)
 ## 【对应的 LeetCode 练习题】
 ### 队列
 -   Design Circular Deque（设计一个双端队列） 
