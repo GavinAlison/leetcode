@@ -20,11 +20,10 @@ public class LinkedStack<E> {
 
     public void push(E e) {
         Node<E> newNode = new Node<>(e, null);
-        if (top == null) {
-            top = newNode;
+        if (top != null) {
+            Node curr = top;
+            newNode.next = curr;
         }
-        Node curr = top;
-        newNode.next = curr;
         top = newNode;
         size++;
     }

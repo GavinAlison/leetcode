@@ -1,0 +1,18 @@
+## 【队列】
+-   用数组实现一个顺序队列
+-   用链表实现一个链式队列
+-   实现一个循环队列
+
+## 解答
+顺序队列-->[ArrayQueue]()
+链式队列-->[ArrayQueue]()
+
+## 【对应的 LeetCode 练习题】
+### 队列
+-   Design Circular Deque（设计一个双端队列） 
+英文版：https://leetcode.com/problems/design-circular-deque/    
+中文版：https://leetcode-cn.com/problems/design-circular-deque/     
+-   Sliding Window Maximum（滑动窗口最大值）     
+英文版：https://leetcode.com/problems/sliding-window-maximum/   
+中文版：https://leetcode-cn.com/problems/sliding-window-maximum/    
+

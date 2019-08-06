@@ -3,7 +3,9 @@
 -   用数组实现一个顺序栈
 -   用z链表实现一个链式栈
 -   编程模拟实现一个浏览器的前进、后退功能
-
+#### 解答：
+-   用数组实现一个顺序栈：[ArrayStack](https://github.com/GavinAlison/leetcode/tree/master/algorithm/src/main/java/com/alison/ArrayStack.java)
+-   用z链表实现一个链式栈: [LinkedStack](https://github.com/GavinAlison/leetcode/tree/master/algorithm/src/main/java/com/alison/LinkedStack.java)
 
 ## leetcode题
 
@@ -21,7 +23,9 @@
 中文版：https://leetcode-cn.com/problems/evaluate-reverse-polish-notation/    
 
 ## 内容content
+
 顺序栈和链栈      
+
 ### 顺序栈     
 利用一组地址连续的存储单元依次存放栈底到栈顶的数据元素，栈底位置固定不变，栈顶位置随着入栈和出栈操作而变化。
 
@@ -54,7 +58,17 @@ display --> 利用变量head，记录top值，作为一个遍历指针，遍历�
 
 ### 编程模拟实现一个浏览器的前进、后退功能
 
-
+#### 解答：
+代码实现： [Browser](https://github.com/GavinAlison/leetcode/tree/master/algorithm/src/main/java/com/alison/Browser.java)
 
 
 ### Valid Parentheses（有效的括号）    
+
+
+
+
+
+详细的知识点：  [栈](https://blog.csdn.net/qq_16399991/article/details/84261849)
+https://blog.csdn.net/qq_16399991/article/details/84261849
+
+
