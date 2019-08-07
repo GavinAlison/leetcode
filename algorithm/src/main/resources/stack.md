@@ -3,9 +3,6 @@
 -   用数组实现一个顺序栈
 -   用z链表实现一个链式栈
 -   编程模拟实现一个浏览器的前进、后退功能
-#### 解答：
--   用数组实现一个顺序栈：[ArrayStack](https://github.com/GavinAlison/leetcode/tree/master/algorithm/src/main/java/com/alison/ArrayStack.java)
--   用z链表实现一个链式栈: [LinkedStack](https://github.com/GavinAlison/leetcode/tree/master/algorithm/src/main/java/com/alison/LinkedStack.java)
 
 ## leetcode题
 
@@ -21,6 +18,9 @@
 -   Evaluate Reverse Polish Notatio（逆波兰表达式求值）   
 英文版：https://leetcode.com/problems/evaluate-reverse-polish-notation/    
 中文版：https://leetcode-cn.com/problems/evaluate-reverse-polish-notation/    
+
+
+--------------------
 
 ## 内容content
 
@@ -56,18 +56,21 @@ display --> 利用变量head，记录top值，作为一个遍历指针，遍历�
 先进后出,只允许在栈顶操作       
 
 
-### 编程模拟实现一个浏览器的前进、后退功能
 
 #### 解答：
-代码实现： [Browser](https://github.com/GavinAlison/leetcode/tree/master/algorithm/src/main/java/com/alison/Browser.java)
+-   用数组实现一个顺序栈：[ArrayStack](https://github.com/GavinAlison/leetcode/tree/master/algorithm/src/main/java/com/alison/ArrayStack.java)
+-   用z链表实现一个链式栈: [LinkedStack](https://github.com/GavinAlison/leetcode/tree/master/algorithm/src/main/java/com/alison/LinkedStack.java)
+-   编程模拟实现一个浏览器的前进、后退功能： [Browser](https://github.com/GavinAlison/leetcode/tree/master/algorithm/src/main/java/com/alison/Browser.java)
 
 
-### Valid Parentheses（有效的括号）    
+-   Valid Parentheses（有效的括号）  --->  
+-   Longest Valid Parentheses（最长有效的括号）  -->
+-   Evaluate Reverse Polish Notatio（逆波兰表达式求值） --->
 
 
 
 
-
+## 其他
 详细的知识点：  [栈](https://blog.csdn.net/qq_16399991/article/details/84261849)
 https://blog.csdn.net/qq_16399991/article/details/84261849
 

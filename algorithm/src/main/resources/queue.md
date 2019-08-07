@@ -3,10 +3,6 @@
 -   用链表实现一个链式队列
 -   实现一个循环队列
 
-## 解答
-顺序队列-->[ArrayQueue](https://github.com/GavinAlison/leetcode/tree/master/algorithm/src/main/java/com/alison/ArrayQueue.java)
-链式队列-->[LinkedQueue](https://github.com/GavinAlison/leetcode/tree/master/algorithm/src/main/java/com/alison/LinkedQueue.java)
-循环队列-->[CircleQueue](https://github.com/GavinAlison/leetcode/tree/master/algorithm/src/main/java/com/alison/LinkedQueue.java)
 
 ## 【对应的 LeetCode 练习题】
 ### 队列
@@ -16,4 +12,12 @@
 -   Sliding Window Maximum（滑动窗口最大值）     
 英文版：https://leetcode.com/problems/sliding-window-maximum/   
 中文版：https://leetcode-cn.com/problems/sliding-window-maximum/    
+
+
+---  
+## 解答
+-   顺序队列-->[ArrayQueue](https://github.com/GavinAlison/leetcode/tree/master/algorithm/src/main/java/com/alison/ArrayQueue.java)
+-   链式队列-->[LinkedQueue](https://github.com/GavinAlison/leetcode/tree/master/algorithm/src/main/java/com/alison/LinkedQueue.java)
+-   循环队列-->[CircleLinkList](https://github.com/GavinAlison/leetcode/tree/master/algorithm/src/main/java/com/alison/CircleLinkList.java)
+
 
