@@ -1,19 +1,19 @@
 # Task1
 
 ## 数组
--   [数组](https://github.com/GavinAlison/leetcode/blob/master/algorithm/src/main/resources/array.md)
+-   [数组](https://github.com/GavinAlison/leetcode/blob/master/algorithm/src/main/resources/array.md) √
 ## 列表
--   [列表](https://github.com/GavinAlison/leetcode/blob/master/algorithm/src/main/resources/list.md)
+-   [列表](https://github.com/GavinAlison/leetcode/blob/master/algorithm/src/main/resources/list.md) √
 
 # Task2
 ## 栈
--   [栈](https://github.com/GavinAlison/leetcode/blob/master/algorithm/src/main/resources/stack.md)
+-   [栈](https://github.com/GavinAlison/leetcode/blob/master/algorithm/src/main/resources/stack.md) 
 
 ## 队列
--   [队列](https://github.com/GavinAlison/leetcode/blob/master/algorithm/src/main/resources/queue.md)
+-   [队列](https://github.com/GavinAlison/leetcode/blob/master/algorithm/src/main/resources/queue.md) 
 
 ## 递归
--   [递归](https://github.com/GavinAlison/leetcode/blob/master/algorithm/src/main/resources/recursion.md)
+-   [递归](https://github.com/GavinAlison/leetcode/blob/master/algorithm/src/main/resources/recursion.md) √
 
 
 # Task3
