@@ -12,10 +12,11 @@
 4. Happy Number-->[ArrayDemo##isHappy](https://github.com/GavinAlison/leetcode/tree/master/algorithm/src/main/java/com/alison/ArrayDemo.java)
 
 
-第一部分 就是熟悉动态数组的内容；
-第二部分就是熟悉链表的内容；
-第三部分就是在这些基础上 进行练习。
-合并K个排序链表 K=2就是上面的特例了。
+## 总结
+-   第一部分 就是熟悉动态数组的内容；   
+-   第二部分就是熟悉链表的内容；  
+-   第三部分就是在这些基础上 进行练习。  
+-   合并K个排序链表 K=2就是上面的特例了。   
 
 
 

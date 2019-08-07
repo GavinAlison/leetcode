@@ -58,16 +58,13 @@ display --> 利用变量head，记录top值，作为一个遍历指针，遍历�
 
 
 #### 解答：
--   用数组实现一个顺序栈：[ArrayStack](https://github.com/GavinAlison/leetcode/tree/master/algorithm/src/main/java/com/alison/ArrayStack.java)
--   用z链表实现一个链式栈: [LinkedStack](https://github.com/GavinAlison/leetcode/tree/master/algorithm/src/main/java/com/alison/LinkedStack.java)
--   编程模拟实现一个浏览器的前进、后退功能： [Browser](https://github.com/GavinAlison/leetcode/tree/master/algorithm/src/main/java/com/alison/Browser.java)
+-   用数组实现一个顺序栈：--> [ArrayStack](https://github.com/GavinAlison/leetcode/tree/master/algorithm/src/main/java/com/alison/ArrayStack.java)
+-   用z链表实现一个链式栈: -->  [LinkedStack](https://github.com/GavinAlison/leetcode/tree/master/algorithm/src/main/java/com/alison/LinkedStack.java)
+-   编程模拟实现一个浏览器的前进、后退功能：-->  [Browser](https://github.com/GavinAlison/leetcode/tree/master/algorithm/src/main/java/com/alison/Browser.java)
 
-
--   Valid Parentheses（有效的括号）  --->  
--   Longest Valid Parentheses（最长有效的括号）  -->
--   Evaluate Reverse Polish Notatio（逆波兰表达式求值） --->
-
-
+-   Valid Parentheses（有效的括号）  --->  [](https://github.com/GavinAlison/leetcode/tree/master/algorithm/src/main/java/com/alison/ArrayStack.java)
+-   Longest Valid Parentheses（最长有效的括号）  --> [](https://github.com/GavinAlison/leetcode/tree/master/algorithm/src/main/java/com/alison/ArrayStack.java)
+-   Evaluate Reverse Polish Notatio（逆波兰表达式求值） ---> [](https://github.com/GavinAlison/leetcode/tree/master/algorithm/src/main/java/com/alison/ArrayStack.java)
 
 
 ## 其他

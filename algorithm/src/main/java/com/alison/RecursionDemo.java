@@ -8,8 +8,7 @@ import java.util.Arrays;
  * @Version 1.0
  * @Description
  */
-public class Recursion {
-
+public class RecursionDemo {
 
     public int fibonaci(int n) {
         if (n == 1 || n == 0)
@@ -60,7 +59,7 @@ public class Recursion {
     }
 
     public static void main(String[] args) {
-        Recursion recursion = new Recursion();
+        RecursionDemo recursion = new RecursionDemo();
         System.out.println(recursion.climbStairs(4));
     }
 
