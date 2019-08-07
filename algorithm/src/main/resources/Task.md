@@ -5,16 +5,35 @@
 ## 列表
 -   [列表](https://github.com/GavinAlison/leetcode/blob/master/algorithm/src/main/resources/list.md)
 
-
 # Task2
-
 ## 栈
--   [栈]()
+-   [栈](https://github.com/GavinAlison/leetcode/blob/master/algorithm/src/main/resources/stack.md)
 
 ## 队列
--   [栈]()
+-   [队列](https://github.com/GavinAlison/leetcode/blob/master/algorithm/src/main/resources/queue.md)
 
 ## 递归
--   [递归]()
+-   [递归](https://github.com/GavinAlison/leetcode/blob/master/algorithm/src/main/resources/recursion.md)
 
-## 对应leetcode的题
+
+# Task3
+-   [排序]()
+-   [二分查找]()
+
+# Task4
+-   [散列表]()
+-   [字符串]()
+
+
+# Task5
+-   [二叉树]()
+-   [堆]()
+
+# Task6
+-   [图]()
+
+# Task7
+-   [递归]()
+-   [回溯]()
+-   [分治]()
+-   [动态规划]()
