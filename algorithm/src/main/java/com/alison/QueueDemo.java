@@ -5,6 +5,134 @@ import java.util.LinkedList;
 
 public class QueueDemo {
 
+    public class MyCircularDeque {
+
+        private int[] elementData;
+        private int size;
+        private int capacity;
+        private int head;
+        private int tail;
+
+        private int DEFAULT_CAPACITY = 10;
+
+        /**
+         * Initialize your data structure here. Set the size of the deque to be k.
+         */
+        public MyCircularDeque(int k) {
+            if (k < 0) {
+                this.capacity = DEFAULT_CAPACITY;
+            }
+            capacity = k;
+            elementData = new int[capacity];
+            head = 0;
+            tail = 0;
+        }
+
+        /**
+         * Adds an item at the front of Deque. Return true if the operation is successful.
+         */
+        public boolean insertFront(int value) {
+            if (isFull()) {
+                return false;
+            }
+            if (head - 1 < 0) {
+                head = capacity - 1;
+            } else {
+                head = head - 1;
+            }
+            elementData[head] = value;
+            size++;
+            return true;
+        }
+
+        /**
+         * Adds an item at the rear of Deque. Return true if the operation is successful.
+         */
+        public boolean insertLast(int value) {
+            if (isFull()) {
+                return false;
+            }
+
+            elementData[tail] = value;
+            size++;
+            return true;
+        }
+
+        /**
+         * Deletes an item from the front of Deque. Return true if the operation is successful.
+         */
+        public boolean deleteFront() {
+            if (isEmpty()) {
+                return false;
+            }
+            head = (head + 1) % capacity;
+            size--;
+            return true;
+        }
+
+        /**
+         * Deletes an item from the rear of Deque. Return true if the operation is successful.
+         */
+        public boolean deleteLast() {
+            if (isEmpty()) {
+                return false;
+            }
+            if (tail == 0) {
+                tail = capacity - 1;
+            } else {
+                tail = tail - 1;
+            }
+            size--;
+            return true;
+        }
+
+        /**
+         * Get the front item from the deque.
+         */
+        public int getFront() {
+            return elementData[head];
+        }
+
+        /**
+         * Get the last item from the deque.
+         */
+        public int getRear() {
+            return elementData[tail];
+        }
+
+        /**
+         * Checks whether the circular deque is empty or not.
+         */
+        public boolean isEmpty() {
+            return size == 0;
+        }
+
+        /**
+         * Checks whether the circular deque is full or not.
+         */
+        public boolean isFull() {
+            return size == capacity;
+        }
+
+        public String toString() {
+            StringBuilder sb = new StringBuilder();
+            if (head < tail) {
+                for (int i = head; i <= tail; i++) {
+                    sb.append(elementData[i] + " ");
+                }
+            } else {
+                for (int i = head; i < capacity; i++) {
+                    sb.append(elementData[i] + " ");
+                }
+                for (int i = 0; i < tail; i++) {
+                    sb.append(elementData[i] + " ");
+                }
+            }
+            return sb.toString();
+        }
+    }
+
+
     public int[] maxSlibingWindow(int[] nums, int k) {
         int n = nums.length;
         if (n * k == 0)
@@ -100,6 +228,22 @@ public class QueueDemo {
     public static void main(String[] args) {
         int[] nums = {1, 3, -1, -3, 5, 3, 6, 7};
         QueueDemo queueDemo = new QueueDemo();
-        queueDemo.maxSlibingWindow(nums, 3);
+//        queueDemo.maxSlibingWindow(nums, 3);
+        MyCircularDeque myCircularDeque = queueDemo.new MyCircularDeque(10);
+        myCircularDeque.insertFront(1);
+        myCircularDeque.insertFront(2);
+        myCircularDeque.insertFront(3);
+        myCircularDeque.insertFront(4);
+        myCircularDeque.insertFront(5);
+        System.out.println(myCircularDeque.toString());
+        myCircularDeque.insertLast(66);
+        myCircularDeque.deleteFront();
+        System.out.println(myCircularDeque.toString());
+        myCircularDeque.deleteLast();
+        System.out.println(myCircularDeque.toString());
+        System.out.println(myCircularDeque.getFront());
+        System.out.println(myCircularDeque.getRear());
+
     }
+
 }

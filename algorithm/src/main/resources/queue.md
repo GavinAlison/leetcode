@@ -20,4 +20,5 @@
 -   链式队列-->[LinkedQueue](https://github.com/GavinAlison/leetcode/tree/master/algorithm/src/main/java/com/alison/LinkedQueue.java)
 -   循环队列-->[CircleLinkList](https://github.com/GavinAlison/leetcode/tree/master/algorithm/src/main/java/com/alison/CircleLinkList.java)
 
-
+-   Design Circular Deque（设计一个双端队列） ---> [QueueDemo##MyCircularDeque](https://github.com/GavinAlison/leetcode/tree/master/algorithm/src/main/java/com/alison/QueueDemo.java)
+-   Sliding Window Maximum（滑动窗口最大值） ---> [QueueDemo##maxSlidingWindow](https://github.com/GavinAlison/leetcode/tree/master/algorithm/src/main/java/com/alison/QueueDemo.java)
