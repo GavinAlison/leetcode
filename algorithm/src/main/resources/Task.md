@@ -7,10 +7,10 @@
 
 # Task2
 ## 栈
--   [栈](https://github.com/GavinAlison/leetcode/blob/master/algorithm/src/main/resources/stack.md) 
+-   [栈](https://github.com/GavinAlison/leetcode/blob/master/algorithm/src/main/resources/stack.md) √
 
 ## 队列
--   [队列](https://github.com/GavinAlison/leetcode/blob/master/algorithm/src/main/resources/queue.md) 
+-   [队列](https://github.com/GavinAlison/leetcode/blob/master/algorithm/src/main/resources/queue.md) √
 
 ## 递归
 -   [递归](https://github.com/GavinAlison/leetcode/blob/master/algorithm/src/main/resources/recursion.md) √
