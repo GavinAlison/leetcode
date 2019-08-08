@@ -1,6 +1,7 @@
 package com.alison;
 
 import java.util.ArrayDeque;
+import java.util.LinkedList;
 
 public class QueueDemo {
 
@@ -34,6 +35,13 @@ public class QueueDemo {
         }
     }
 
+    /*
+    遍历数组，将数存放在双向队列中，并用L,R来标记窗口的左边界和右边界。队列中保存的并不是真的数，
+    而是该数值对应的数组下标位置，并且数组中的数要从大到小排序。如果当前遍历的数比队尾的值大，
+    则需要弹出队尾值，直到队列重新满足从大到小的要求。刚开始遍历时，L和R都为0，有一个形成窗口的过程，
+    此过程没有最大值，L不动，R向右移。当窗口大小形成时，L和R一起向右移，每次移动时，
+    判断队首的值的数组下标是否在[L,R]中，如果不在则需要弹出队首的值，当前窗口的最大值即为队首的数。
+     */
     public int[] maxSlidingWindow2(int[] nums, int k) {
         int n = nums.length;
         if (n * k == 0)
@@ -61,6 +69,32 @@ public class QueueDemo {
             output[i - k + 1] = nums[deq.getFirst()];
         }
         return output;
+    }
+
+    public int[] maxSlidingWindow3(int[] nums, int k) {
+        if (nums == null || nums.length < 2) return nums;
+        // 双向队列 保存当前窗口最大值的数组位置 保证队列中数组位置的数值按从大到小排序
+        LinkedList<Integer> queue = new LinkedList();
+        // 结果数组
+        int[] result = new int[nums.length - k + 1];
+        // 遍历nums数组
+        for (int i = 0; i < nums.length; i++) {
+            // 保证从大到小 如果前面数小则需要依次弹出，直至满足要求
+            while (!queue.isEmpty() && nums[queue.peekLast()] <= nums[i]) {
+                queue.pollLast();
+            }
+            // 添加当前值对应的数组下标
+            queue.addLast(i);
+            // 判断当前队列中队首的值是否有效
+            if (queue.peek() <= i - k) {
+                queue.poll();
+            }
+            // 当窗口长度为k时 保存当前窗口中最大值
+            if (i + 1 >= k) {
+                result[i + 1 - k] = nums[queue.peek()];
+            }
+        }
+        return result;
     }
 
     public static void main(String[] args) {
