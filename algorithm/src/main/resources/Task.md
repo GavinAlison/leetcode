@@ -17,8 +17,7 @@
 
 
 # Task3
--   [排序]()
--   [二分查找]()
+-   [排序/二分查找](https://github.com/GavinAlison/leetcode/blob/master/algorithm/src/main/resources/sort.md)  √
 
 # Task4
 -   [散列表]()

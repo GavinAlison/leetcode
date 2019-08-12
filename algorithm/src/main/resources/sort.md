@@ -16,3 +16,31 @@ Sliding Window Maximum（滑动窗口最大值）
 Sqrt(x) （x 的平方根）
 英文版：https://leetcode.com/problems/sqrtx/
 中文版：https://leetcode-cn.com/problems/sqrtx/
+
+
+## 解答
+-   各种排序--->        
+    [冒泡排序](https://github.com/GavinAlison/leetcode/blob/master/algorithm/src/main/java/com/alison/sort/BubbleSort.java)     
+    [选择排序](https://github.com/GavinAlison/leetcode/blob/master/algorithm/src/main/java/com/alison/sort/SelectionSort.java)  
+    [插入排序](https://github.com/GavinAlison/leetcode/blob/master/algorithm/src/main/java/com/alison/sort/InsertSort.java)     
+    [希尔排序](https://github.com/GavinAlison/leetcode/blob/master/algorithm/src/main/java/com/alison/sort/ShellSort.java)     
+    [归并排序](https://github.com/GavinAlison/leetcode/blob/master/algorithm/src/main/java/com/alison/sort/MergeSort.java)     
+    [快速排序](https://github.com/GavinAlison/leetcode/blob/master/algorithm/src/main/java/com/alison/sort/QuickSort.java)     
+    [堆排序](https://github.com/GavinAlison/leetcode/blob/master/algorithm/src/main/java/com/alison/sort/HeapSort.java)      
+    [计数排序](https://github.com/GavinAlison/leetcode/blob/master/algorithm/src/main/java/com/alison/sort/CountingSort.java)     
+    [桶排序](https://github.com/GavinAlison/leetcode/blob/master/algorithm/src/main/java/com/alison/sort/BucketSort.java)      
+    [基数排序](https://github.com/GavinAlison/leetcode/blob/master/algorithm/src/main/java/com/alison/sort/RadixSort.java)     
+-   编程实现 O(n) 时间复杂度内找到一组数据的第 K 大元素--->[SortDemo##findKthLargest](https://github.com/GavinAlison/leetcode/blob/master/algorithm/src/main/java/com/alison/sort/SortDemo.java)
+-   有序数组的二分查找算法--->[SortDemo##binarySearch](https://github.com/GavinAlison/leetcode/blob/master/algorithm/src/main/java/com/alison/sort/SortDemo.java)
+-   模糊二分查找算法--->[SortDemo##binarySearch2](https://github.com/GavinAlison/leetcode/blob/master/algorithm/src/main/java/com/alison/sort/SortDemo.java)
+-   Sliding Window Maximum--->[QueueDemo##maxSlidingWindow](https://github.com/GavinAlison/leetcode/tree/master/algorithm/src/main/java/com/alison/QueueDemo.java)
+-   Sqrt(x)--->[SortDemo##mySqrt](https://github.com/GavinAlison/leetcode/blob/master/algorithm/src/main/java/com/alison/sort/SortDemo.java)
+
+
+## 其他知识点
+[排序的总结](https://github.com/GavinAlison/leetcode/blob/master/algorithm/src/main/resources/sort_think.md)
+
+
+
+
+
