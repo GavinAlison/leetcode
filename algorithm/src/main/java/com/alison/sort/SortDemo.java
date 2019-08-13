@@ -28,10 +28,10 @@ public class SortDemo {
 //        System.out.println(Arrays.toString(arr));
         SortDemo sortDemo = new SortDemo();
         int[] arr = {1, 4, 6, 8, 20, 22, 24};
-        int res = sortDemo.binarySearch2(arr, 5);
-        System.out.println(res);
-//        System.out.println(sortDemo.mySqrt(2));
-
+//        int res = sortDemo.binarySearch2(arr, 5);
+//        System.out.println(res);
+//        System.out.println(sortDemo.mySqrt(5));
+        System.out.println(sortDemo.findKthLargest(arr, 3));
     }
 
     public int findKthLargest(int[] nums, int k) {
@@ -45,6 +45,7 @@ public class SortDemo {
         return heap.poll();
     }
 
+    // 二分查找，不断递归，注意递归会增加内存的使用，方法的使用层级， 最好用循坏
     public int binarySearch(int[] arr, int start, int end, int target) {
         if (start > end) return -1;
         int mid = start + (end - start) / 2;
@@ -80,6 +81,7 @@ public class SortDemo {
         return -1;
     }
 
+    // 这种解法针对于整数的算数平方根
     public int mySqrt(int x) {
         if (x == 0 || x == 1) {
             return x;
@@ -87,8 +89,10 @@ public class SortDemo {
         int left = 1;
         int right = x;
         int result = 1;
+        // 小于等于， 注意等于号
         while (left <= right) {
             int m = (left + right) / 2;
+            // x/m 可以避免x*x造成内存溢出
             if (m == x / m)
                 return m;
             if (m > x / m) {
@@ -101,6 +105,7 @@ public class SortDemo {
         return result;
     }
 
+    // 牛顿迭代法
     public int mySqrt2(int x) {
         if (x < 0) {
             throw new IllegalArgumentException("x's value error");
@@ -110,6 +115,17 @@ public class SortDemo {
         }
         double k = 1;
         while (Math.abs(x - k * k) >= 0.5) {
+            k = (k + x / k) / 2;
+        }
+        return (int) k;
+    }
+
+    public int mySqrt3(int x) {
+        if (x == 0 || x == 1) {
+            return x;
+        }
+        long k = x;
+        while (k * k > x) {
             k = (k + x / k) / 2;
         }
         return (int) k;
