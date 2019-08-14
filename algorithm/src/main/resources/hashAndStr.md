@@ -36,4 +36,3 @@
 ## 其他知识
 -   [朴素匹配算法](https://blog.csdn.net/ylyg050518/article/details/78825387)   先看文字
 -   https://blog.csdn.net/syy0377/article/details/17352539
--   
