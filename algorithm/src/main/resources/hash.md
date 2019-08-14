@@ -17,7 +17,7 @@
 -   Reverse Words in a String（翻转字符串里的单词）    
 英文版：https://leetcode.com/problems/reverse-words-in-a-string/    
 中文版：https://leetcode-cn.com/problems/reverse-words-in-a-string/ 
--   String to Integer (atoi)（字符串转换整数 (atoi)）[作为可选]  
+-   String to Integer (atoi)（字符串转换整数 (atoi)）    
 英文版：https://leetcode.com/problems/string-to-integer-atoi/   
 中文版：https://leetcode-cn.com/problems/string-to-integer-atoi/  
 
@@ -31,3 +31,9 @@
 -   Reverse--->[]()
 -   Reverse Words--->[]()
 -   String to Integer--->[]()
+
+
+## 其他知识
+-   [朴素匹配算法](https://blog.csdn.net/ylyg050518/article/details/78825387)   先看文字
+-   https://blog.csdn.net/syy0377/article/details/17352539
+-   
