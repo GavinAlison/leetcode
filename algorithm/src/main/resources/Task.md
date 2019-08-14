@@ -20,9 +20,10 @@
 -   [排序/二分查找](https://github.com/GavinAlison/leetcode/blob/master/algorithm/src/main/resources/sort.md)  √
 
 # Task4
--   [散列表]()
--   [字符串]()
+-   [散列表](https://github.com/GavinAlison/leetcode/blob/master/algorithm/src/main/resources/hashAndStr.md)
+-   [字符串](https://github.com/GavinAlison/leetcode/blob/master/algorithm/src/main/resources/hashAndStr.md)
 
+√
 
 # Task5
 -   [二叉树]()

@@ -23,14 +23,14 @@
 
 
 ## 解答
--   基于链表法解决冲突问题的散列表-->[MyHash]()
--   LRU 缓存淘汰算法 ---> [LRU1/2/3]()
--   26 个英文字母的 Trie 树--->[]()
--   朴素的字符串匹配算法--->[]()
--   two sum--->[]()
--   Reverse--->[]()
--   Reverse Words--->[]()
--   String to Integer--->[]()
+-   基于链表法解决冲突问题的散列表-->[MyHash](https://github.com/GavinAlison/leetcode/blob/master/algorithm/src/main/java/com/alison/MyHash.java)
+-   LRU 缓存淘汰算法 ---> [LRUCache1/2/3](https://github.com/GavinAlison/leetcode/tree/master/algorithm/src/main/java/com/alison/LRU)
+-   26 个英文字母的 Trie 树--->[Trie1/2](https://github.com/GavinAlison/leetcode/tree/master/algorithm/src/main/java/com/alison/Trie)
+-   朴素的字符串匹配算法--->[NavieStringMatcher##simple](https://github.com/GavinAlison/leetcode/blob/master/algorithm/src/main/java/com/alison/NavieStringMatcher.java)
+-   two sum--->[TwoSum](https://github.com/GavinAlison/leetcode/blob/master/algorithm/src/main/java/com/alison/TwoSum.java)
+-   Reverse--->[StrDemo##reverseString](https://github.com/GavinAlison/leetcode/blob/master/algorithm/src/main/java/com/alison/StrDemo.java)
+-   Reverse Words--->[StrDemo##reverseWords](https://github.com/GavinAlison/leetcode/blob/master/algorithm/src/main/java/com/alison/StrDemo.java)
+-   String to Integer--->[StrDemo##myAtoi2](https://github.com/GavinAlison/leetcode/blob/master/algorithm/src/main/java/com/alison/StrDemo.java)
 
 
 ## 其他知识
