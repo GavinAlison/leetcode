@@ -35,4 +35,9 @@
 
 ## 其他知识
 -   [朴素匹配算法](https://blog.csdn.net/ylyg050518/article/details/78825387)   先看文字
--   https://blog.csdn.net/syy0377/article/details/17352539
+-   [KMP算法（字符串匹配算法）详解及java实现](https://blog.csdn.net/syy0377/article/details/17352539)
+-   [KMP](https://blog.csdn.net/gao506440410/article/details/81812163)
+
+
+
+

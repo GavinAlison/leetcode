@@ -13,7 +13,7 @@
 -   [队列](https://github.com/GavinAlison/leetcode/blob/master/algorithm/src/main/resources/queue.md) √
 
 ## 递归
--   [递归](https://github.com/GavinAlison/leetcode/blob/master/algorithm/src/main/resources/recursion.md) √
+-   [递归](https://github.com/GavinAlison/leetcode/blob/master/algorithm/src/main/resources/recursive.md) √
 
 
 # Task3
