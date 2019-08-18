@@ -9,7 +9,6 @@ import java.util.List;
  * @Version 1.0
  * @Description 二叉堆(最小堆)
  */
-
 public class MinHeap<T extends Comparable<T>> {
 
     private List<T> mHeap;        // 存放堆的数组
@@ -17,12 +16,9 @@ public class MinHeap<T extends Comparable<T>> {
     public MinHeap() {
         this.mHeap = new ArrayList<T>();
     }
-
     /*
      * 最小堆的向下调整算法
-     *
      * 注：数组实现的堆中，第N个节点的左孩子的索引值是(2N+1)，右孩子的索引是(2N+2)。
-     *
      * 参数说明：
      *     start -- 被下调节点的起始位置(一般为0，表示从第1个开始)
      *     end   -- 截至范围(一般为数组中最后一个元素的索引)
@@ -32,6 +28,7 @@ public class MinHeap<T extends Comparable<T>> {
         int l = 2 * c + 1;     // 左(left)孩子的位置
         T tmp = mHeap.get(c);    // 当前(current)节点的大小
         while (l <= end) {
+            // 比较 l 和 r 孩子值
             int cmp = mHeap.get(l).compareTo(mHeap.get(l + 1));
             // "l"是左孩子，"l+1"是右孩子
             if (l < end && cmp > 0)
@@ -40,17 +37,19 @@ public class MinHeap<T extends Comparable<T>> {
             if (cmp <= 0)
                 break;        //调整结束
             else {
+                // 将c位值设置为 孩子中较小者
                 mHeap.set(c, mHeap.get(l));
+                // c、l移动位置
                 c = l;
                 l = 2 * l + 1;
             }
         }
+        // 将要调整的值 调整到对应的位置
         mHeap.set(c, tmp);
     }
 
     /*
      * 最小堆的删除
-     *
      * 返回值：
      *     成功，返回被删除的值
      *     失败，返回null
@@ -73,9 +72,7 @@ public class MinHeap<T extends Comparable<T>> {
 
     /*
      * 最小堆的向上调整算法(从start开始向上直到0，调整堆)
-     *
      * 注：数组实现的堆中，第N个节点的左孩子的索引值是(2N+1)，右孩子的索引是(2N+2)。
-     *
      * 参数说明：
      *     start -- 被上调节点的起始位置(一般为数组中最后一个元素的索引)
      */
@@ -83,7 +80,6 @@ public class MinHeap<T extends Comparable<T>> {
         int c = start;            // 当前节点(current)的位置
         int p = (c - 1) / 2;        // 父(parent)结点的位置
         T tmp = mHeap.get(c);        // 当前节点(current)的大小
-
         while (c > 0) {
             int cmp = mHeap.get(p).compareTo(tmp);
             if (cmp <= 0)
@@ -102,7 +98,6 @@ public class MinHeap<T extends Comparable<T>> {
      */
     public void insert(T data) {
         int size = mHeap.size();
-
         mHeap.add(data);    // 将"数组"插在表尾
         filterup(size);        // 向上调整堆
     }
@@ -111,7 +106,6 @@ public class MinHeap<T extends Comparable<T>> {
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < mHeap.size(); i++)
             sb.append(mHeap.get(i) + " ");
-
         return sb.toString();
     }
 

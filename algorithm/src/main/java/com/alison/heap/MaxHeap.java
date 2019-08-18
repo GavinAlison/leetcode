@@ -87,7 +87,6 @@ public class MaxHeap<T extends Comparable<T>> {
         int c = start;            // 当前节点(current)的位置
         int p = (c - 1) / 2;        // 父(parent)结点的位置
         T tmp = mHeap.get(c);        // 当前节点(current)的大小
-
         while (c > 0) {
             int cmp = mHeap.get(p).compareTo(tmp);
             if (cmp >= 0)
@@ -106,7 +105,6 @@ public class MaxHeap<T extends Comparable<T>> {
      */
     public void insert(T data) {
         int size = mHeap.size();
-
         mHeap.add(data);    // 将"数组"插在表尾
         filterup(size);        // 向上调整堆
     }
