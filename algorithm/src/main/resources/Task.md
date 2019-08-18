@@ -26,8 +26,10 @@
 √
 
 # Task5
--   [二叉树]()
--   [堆]()
+-   [二叉树](https://github.com/GavinAlison/leetcode/blob/master/algorithm/src/main/resources/bst.md)
+-   [堆](https://github.com/GavinAlison/leetcode/blob/master/algorithm/src/main/resources/bst.md)
+
+√
 
 # Task6
 -   [图]()
