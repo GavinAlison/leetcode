@@ -9,7 +9,7 @@
 -   利用优先级队列合并 K 个有序数组
 -   求一组动态数据集合的最大 Top K
 （选做）第三天堆排序学习（复习）
-## 对应的 LeetCode 练习题
+## 对应的 LeetCode 练习题 
 -   Invert Binary Tree（翻转二叉树）   
 英文版：https://leetcode.com/problems/invert-binary-tree/           
 中文版：https://leetcode-cn.com/problems/invert-binary-tree/        
@@ -26,8 +26,9 @@
 
 ## 解答
 -   二叉查找树的插入、删除、查找、后继、前驱节点、前、中、后序以及按层遍历
-    [BSTreeTest]()
--   [堆]()
+    [BSTreeTest](https://github.com/GavinAlison/leetcode/blob/master/algorithm/src/main/java/com/alison/Bst/BSTreeTest.java)
+-   [堆](https://github.com/GavinAlison/leetcode/blob/master/algorithm/src/main/java/com/alison/heap/MaxHeap.java)
+-   [堆2](https://github.com/GavinAlison/leetcode/blob/master/algorithm/src/main/java/com/alison/heap/MinHeap.java)
 -   []()
 
 ## 查看链接
