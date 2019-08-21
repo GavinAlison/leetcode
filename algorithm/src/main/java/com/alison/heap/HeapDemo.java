@@ -52,7 +52,7 @@ public class HeapDemo {
     }
 
     public static void main(String[] args) {
-        Main m = new Main();
+        HeapDemo m = new HeapDemo();
         int[][] arr = {{1, 3, 5, 7}, {2, 4, 6}, {0, 8, 9, 10, 11}};
         int[] res = m.mergeKSortedArrays(arr);
         for (int i = 0; i < res.length; i++) {
