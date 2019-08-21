@@ -31,7 +31,12 @@
 √
 
 # Task6
--   [图]()
+-   [图](https://github.com/GavinAlison/leetcode/blob/master/algorithm/src/main/resources/9.graph.md)
+
+做了有向无向图，其他的继续查看资料
+>资料很重要，好的资料更重要，坏的文章真的很影响心情，搜索的时候要是有文章的评分就好了，评分高的优先搜索出来，
+评分低的一边去， 看来好的搜索引擎不紧资源多，也要好！！
+
 
 # Task7
 -   [递归]()
