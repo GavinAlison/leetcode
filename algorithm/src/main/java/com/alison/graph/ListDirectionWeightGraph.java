@@ -4,18 +4,15 @@ import java.io.IOException;
 import java.util.Scanner;
 
 /**
- * Java: 邻接表表示的"无向无权图(List Undirected Graph)"
+ * Java: 邻接矩阵图  有向有权图
  * <p>
- * 先存储数组VNode[], 再存储边, 无向的边，存储需要存储两次， A-C, 存储A->C, C->A
- * <p>
- * 理解
- * <p>
- * 链接 ->https://www.cnblogs.com/skywang12345/p/3707612.html
+ * 链接--->https://www.cnblogs.com/skywang12345/p/3707626.html
  */
-public class ListUDG {
+public class ListDirectionWeightGraph {
     // 邻接表中表对应的链表的顶点
     private class ENode {
         int ivex;       // 该边所指向的顶点的位置
+        int weight;     // 权重
         ENode nextEdge; // 指向下一条弧的指针
     }
 
@@ -25,12 +22,16 @@ public class ListUDG {
         ENode firstEdge;    // 指向第一条依附该顶点的弧
     }
 
+    ;
+
     private VNode[] mVexs;  // 顶点数组
+
 
     /*
      * 创建图(自己输入数据)
      */
-    public ListUDG() {
+    public ListDirectionWeightGraph() {
+
         // 输入"顶点数"和"边数"
         System.out.printf("input vertex number: ");
         int vlen = readInt();
@@ -40,7 +41,6 @@ public class ListUDG {
             System.out.printf("input error: invalid parameters!\n");
             return;
         }
-
         // 初始化"顶点"
         mVexs = new VNode[vlen];
         for (int i = 0; i < mVexs.length; i++) {
@@ -56,25 +56,58 @@ public class ListUDG {
             System.out.printf("edge(%d):", i);
             char c1 = readChar();
             char c2 = readChar();
-            int cIndex1 = getPosition(c1);
-            int cIndex2 = getPosition(c2);
+            int weight = readInt();
+            int p1 = getPosition(c1);
+            int p2 = getPosition(c2);
             // 初始化node1
             ENode node1 = new ENode();
-            // 设置node1的ivex值为cIndex2, 这个值是数组mVexs的下标
-            node1.ivex = cIndex2;
-            // 将node1链接到"cIndex1所在链表的末尾"
-            if (mVexs[cIndex1].firstEdge == null)
-                mVexs[cIndex1].firstEdge = node1;
+            node1.ivex = p2;
+            node1.weight = weight;
+            // 将node1链接到"p1所在链表的末尾"
+            if (mVexs[p1].firstEdge == null)
+                mVexs[p1].firstEdge = node1;
             else
-                linkLast(mVexs[cIndex1].firstEdge, node1);
-            // 初始化node2
-            ENode node2 = new ENode();
-            node2.ivex = cIndex1;
-            // 将node2链接到"cIndex2所在链表的末尾"
-            if (mVexs[cIndex2].firstEdge == null)
-                mVexs[cIndex2].firstEdge = node2;
+                linkLast(mVexs[p1].firstEdge, node1);
+        }
+    }
+
+    /*
+     * 创建图(用已提供的矩阵)
+     *
+     * 参数说明：
+     *     vexs  -- 顶点数组
+     *     edges -- 边数组
+     */
+    public ListDirectionWeightGraph(char[] vexs, char[][] edges) {
+        // 初始化"顶点数"和"边数"
+        int vlen = vexs.length;
+        int elen = edges.length;
+        // 初始化"顶点"
+        mVexs = new VNode[vlen];
+        for (int i = 0; i < mVexs.length; i++) {
+            mVexs[i] = new VNode();
+            mVexs[i].data = vexs[i];
+            mVexs[i].firstEdge = null;
+        }
+        // 初始化"边"
+        for (int i = 0; i < elen; i++) {
+            // 读取边的起始顶点和结束顶点
+            char c1 = edges[i][0];
+            char c2 = edges[i][1];
+            int weight = edges[i][2];
+            // 读取边的起始顶点和结束顶点
+            int pIndex1 = getPosition(edges[i][0]);
+            int pIndex2 = getPosition(edges[i][1]);
+            // 注意，这里与listUDG的区别，在于不需要设置两次， node1, node2
+            // 初始化node1
+            ENode node1 = new ENode();
+            node1.ivex = pIndex2;
+            node1.weight = weight;
+            // 将node1链接到"pIndex1所在链表的末尾"
+            if (mVexs[pIndex1].firstEdge == null)
+                mVexs[pIndex1].firstEdge = node1;
             else
-                linkLast(mVexs[cIndex2].firstEdge, node2);
+                linkLast(mVexs[pIndex1].firstEdge, node1);
         }
     }
 
@@ -122,51 +155,6 @@ public class ListUDG {
     }
 
     /*
-     * 创建图(用已提供的矩阵)
-     *
-     * 参数说明：
-     *     vexs  -- 顶点数组
-     *     edges -- 边数组
-     */
-    public ListUDG(char[] vexs, char[][] edges) {
-        // 初始化"顶点数"和"边数"
-        int vlen = vexs.length;
-        int elen = edges.length;
-        // 初始化"顶点"
-        mVexs = new VNode[vlen];
-        for (int i = 0; i < mVexs.length; i++) {
-            mVexs[i] = new VNode();
-            mVexs[i].data = vexs[i];
-            mVexs[i].firstEdge = null;
-        }
-        // 初始化"边"
-        for (int i = 0; i < elen; i++) {
-            // 读取边的起始顶点和结束顶点
-            char c1 = edges[i][0];
-            char c2 = edges[i][1];
-            // 读取边的起始顶点和结束顶点
-            int pIndex1 = getPosition(edges[i][0]);
-            int pIndex2 = getPosition(edges[i][1]);
-            // 初始化node1
-            ENode node1 = new ENode();
-            node1.ivex = pIndex2;
-            // 将node1链接到"pIndex1所在链表的末尾"
-            if (mVexs[pIndex1].firstEdge == null)
-                mVexs[pIndex1].firstEdge = node1;
-            else
-                linkLast(mVexs[pIndex1].firstEdge, node1);
-            // 初始化node2
-            ENode node2 = new ENode();
-            node2.ivex = pIndex1;
-            // 将node2链接到"p2所在链表的末尾"
-            if (mVexs[pIndex2].firstEdge == null)
-                mVexs[pIndex2].firstEdge = node2;
-            else
-                linkLast(mVexs[pIndex2].firstEdge, node2);
-        }
-    }
-
-    /*
      * 打印矩阵队列图
      */
     public void print() {
@@ -175,7 +163,7 @@ public class ListUDG {
             System.out.printf("%d(%c): ", i, mVexs[i].data);
             ENode node = mVexs[i].firstEdge;
             while (node != null) {
-                System.out.printf("%d(%c) ", node.ivex, mVexs[node.ivex].data);
+                System.out.printf("%d--%d(%c) ", node.weight, node.ivex, mVexs[node.ivex].data);
                 node = node.nextEdge;
             }
             System.out.printf("\n");
@@ -185,25 +173,20 @@ public class ListUDG {
     public static void main(String[] args) {
         char[] vexs = {'A', 'B', 'C', 'D', 'E', 'F', 'G'};
         char[][] edges = new char[][]{
-                {'A', 'C'},
-                {'A', 'D'},
-                {'A', 'F'},
-                {'B', 'C'},
-                {'C', 'D'},
-                {'E', 'G'},
-                {'F', 'G'}};
-        /*
-        A -- F -- G -- E
-        |  \
-        C -- D
-        |
-        B
-         */
-        ListUDG pG;
+                {'A', 'B', 3},
+                {'B', 'C', 2},
+                {'B', 'E', 5},
+                {'B', 'F', 1},
+                {'C', 'E', 4},
+                {'D', 'C', 6},
+                {'E', 'B', 7},
+                {'E', 'D', 2},
+                {'F', 'G', 3}};
+        ListDirectionWeightGraph pG;
         // 自定义"图"(输入矩阵队列)
-//        pG = new ListUDG();
+        //pG = new ListDG();
         // 采用已有的"图"
-        pG = new ListUDG(vexs, edges);
+        pG = new ListDirectionWeightGraph(vexs, edges);
         pG.print();   // 打印图
     }
 }
