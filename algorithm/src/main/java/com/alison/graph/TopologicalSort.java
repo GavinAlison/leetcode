@@ -11,6 +11,8 @@ import java.util.List;
  * @Version 1.0
  * @Description
  * @link [深入理解拓扑排序（Topological sort)](https://www.jianshu.com/p/3347f54a3187)
+ * 时间复杂度： O(n + e)，其中n为图中的结点数目，e为图中的边的数目
+ * 空间复杂度：O(n)
  */
 public class TopologicalSort {
     /**

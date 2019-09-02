@@ -13,13 +13,12 @@ import java.util.*;
  * @Description
  * @link [图文并貌的DAG（有向无环图）拓扑排序：Kahn算法](https://blog.csdn.net/yanwumuxi/article/details/67633766)
  */
-public class DAG {
+public class DAGKahn {
     @Data
     @AllArgsConstructor
     @NoArgsConstructor
     private static class Node {
         String name;
-
         public String toString() {
             return name;
         }
@@ -37,7 +36,7 @@ public class DAG {
     Queue<Node> zeroIndegree = new LinkedList<Node>();
     Graph graph = new Graph();//定义一个图
 
-    public DAG(Graph graph) {
+    public DAGKahn(Graph graph) {
         this.graph = graph;
     }
 
@@ -112,7 +111,7 @@ public class DAG {
         for (Node key : keys) {
             System.out.print("key=" + key + "  value=" + graph.map.get(key) + "\n");
         }
-        DAG dag = new DAG(graph);
+        DAGKahn dag = new DAGKahn(graph);
         dag.zeroIndegree.add(n1);
         dag.Kahn();
     }
