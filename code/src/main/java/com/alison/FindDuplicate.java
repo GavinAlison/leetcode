@@ -52,6 +52,44 @@ public class FindDuplicate {
     }
 
 
+    public int findDuplicateDouble(int[] nums) {
+        int slow = nums[0];
+        int fast = nums[0];
+        while (true) {
+            slow = nums[slow];
+            fast = nums[nums[fast]];
+            if (slow == fast) break;
+        }
+        fast = nums[0];
+        while (fast != slow) {
+            slow = nums[slow];
+            fast = nums[fast];
+        }
+        return slow;
+    }
+    // index:           0  1  2  3  4
+    // value:           1, 3, 4, 2, 2
+    // init:        slow=1 , fast=1
+    // init1:       slow=3 , fast=2
+    // init2:       slow=2 , fast=2
+    //              fast=1
+    //              slow=4, fast=3
+    //              slow=2, fast=2
+    //   2
+//    ------------------
+// index:            0,1,2,3,4,5,6,7,8,9
+    // value:           [2,5,9,6,9,3,8,9,7,1]
+    // init:        slow=2 , fast=2
+    // init1:       slow=9 , fast=1
+    // init2:       slow=1 , fast=3
+    // init3:       slow=5 , fast=8
+    // init4:       slow=3 , fast=9
+    // init5:       slow=6 , fast=5
+    // init5:       slow=8 , fast=6
+    // init5:       slow=7 , fast=7
+    //              fast=2
+    //              slow=9, fast=9
+    //   9
     public static void main(String[] args) {
         int[] nums = {1, 3, 4, 2, 2};
         nums = new int[]{3, 1, 3, 4, 2, 5};

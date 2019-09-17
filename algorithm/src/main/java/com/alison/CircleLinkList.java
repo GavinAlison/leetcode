@@ -41,25 +41,25 @@ public class CircleLinkList<E> {
     }
 
     // add
-    public boolean add(int index, E e) {
-        checkElementIndex(index);
-        size++;
-        if (size == 0) {
-            Node<E> newNode = new Node<>(e, null);
-            newNode.next = newNode;
-            elementData = newNode;
-            return true;
-        }
-        Node<E> head = elementData;
-        for (int i = 0; i < size; i++) {
-            Node<E> newNode = new Node<>();
-            newNode.next = head.next;
-            head.next = newNode;
-            head = head.next;
-            elementData = head;
-        }
-        return true;
-    }
+//    public boolean add(int index, E e) {
+//        checkElementIndex(index);
+//        size++;
+//        if (size == 0) {
+//            Node<E> newNode = new Node<>(e, null);
+//            newNode.next = newNode;
+//            elementData = newNode;
+//            return true;
+//        }
+//        Node<E> head = elementData;
+//        for (int i = 0; i < size; i++) {
+//            Node<E> newNode = new Node<>();
+//            newNode.next = head.next;
+//            head.next = newNode;
+//            head = head.next;
+//            elementData = head;
+//        }
+//        return true;
+//    }
 
     public boolean add(E e) {
         Node head = elementData;
@@ -83,7 +83,6 @@ public class CircleLinkList<E> {
     private void checkElementIndex(int index) {
         if (index >= size)
             throw new IndexOutOfBoundsException(OutOfBoundMsg(index));
-
     }
 
     private String OutOfBoundMsg(int index) {
